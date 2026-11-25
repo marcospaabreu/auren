@@ -1,0 +1,40 @@
+/* AUREN: viewport WebGL local, sem imagem usada como modelo. */
+.hero-visual{mix-blend-mode:normal;transform:none!important;top:9%;height:84%;right:1%;width:57%;z-index:1}
+.hero-visual #hero-watch{position:absolute;inset:0;transition:opacity .55s;pointer-events:none}
+.hero-visual.three-ready #hero-watch{opacity:0;visibility:hidden}
+.watch-canvas{display:block;width:100%;height:100%;opacity:0;transition:opacity .7s;touch-action:pan-y;cursor:grab}
+.three-ready .watch-canvas{opacity:1}.watch-canvas.dragging{cursor:grabbing}
+.momentos{z-index:2}.hero-painel{pointer-events:none}.hero-painel a{pointer-events:auto}
+.watch-tools{position:absolute;z-index:5;right:6vw;bottom:88px;display:flex;align-items:center;gap:16px}
+.watch-tools button{border:0;border-bottom:1px solid #c9966855;background:#0b0a0980;color:#d5c8b7;font-size:.75rem;padding:8px 2px;line-height:1.4}
+.watch-tools button:hover{color:var(--acento);border-color:var(--acento)}
+.watch-tools button[hidden],.watch-hint[hidden]{display:none}
+.watch-hint{position:absolute;z-index:3;right:6vw;top:112px;color:#9d9181;font-size:.625rem;letter-spacing:.18em;pointer-events:none}
+.cine{height:420vh}
+@media(min-width:1600px){.hero-visual{right:5%;width:52%}}
+@media(max-width:1000px){.hero-visual{right:-5%;width:63%}.watch-tools{right:5vw}}
+@media(max-width:760px){.cine{height:360svh}.hero-visual{top:7%;right:-14%;width:100%;height:57%}.watch-tools{right:24px;bottom:59px;gap:16px}.watch-tools button{font-size:.6875rem;padding:5px 1px}.watch-hint{display:none}.momento{bottom:112px}.hero-painel{background:linear-gradient(90deg,#0b0a09eb,#0b0a0960,transparent)}.cine-rodape{bottom:23px}.hero-visual.three-ready{opacity:1}}
+@media(prefers-reduced-motion:reduce){.cine{height:100svh}.watch-canvas,.hero-visual #hero-watch{transition:none}}
+
+/* Loading state is painted before the 3D setup, and removed after a real frame. */
+.watch-loading{position:absolute;z-index:4;left:50%;bottom:3%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;white-space:nowrap;color:#dbc3a9;background:#0b0a09da;padding:10px 16px;border:1px solid #c9966835;border-radius:30px;font:12px/1.5 Arial,sans-serif;pointer-events:none}
+.watch-loading-ring{width:14px;height:14px;border:1px solid #c9966840;border-top-color:#c99668;border-radius:50%;animation:watch-loading-spin .85s linear infinite}
+.three-ready .watch-loading,[data-renderer="fallback"] .watch-loading{display:none}
+@keyframes watch-loading-spin{to{transform:rotate(360deg)}}
+@media(max-width:760px){.watch-loading{left:43%;bottom:0;font-size:11px}}
+@media(prefers-reduced-motion:reduce){.watch-loading-ring{animation:none}}
+
+/* Three independent Rolex-inspired section studies. */
+[data-rolex]{min-height:110svh}
+.section-watch{position:absolute;right:0;top:5%;width:56%;height:85%;z-index:1;isolation:isolate}
+.section-watch .watch-canvas{opacity:0}.section-watch.three-ready .watch-canvas{opacity:1}
+[data-rolex] .secao-grade,[data-rolex] .detalhes-heading,[data-rolex] .detalhes-layout{position:relative;z-index:2;pointer-events:none}
+[data-rolex] .painel{pointer-events:none}[data-rolex] .painel a,[data-rolex] .painel button,[data-rolex] .painel summary{pointer-events:auto}
+[data-rolex="daytona"] .section-watch{right:auto;left:0}
+.section-watch-tools{position:absolute;right:7vw;bottom:35px;z-index:4;display:flex;gap:20px}
+.section-watch-tools button{background:#0b0a09b0;border:0;border-bottom:1px solid #c9966860;color:#d5c8b7;padding:10px 4px;font-size:12px}
+[data-rolex="daytona"] .section-watch-tools{right:auto;left:7vw}
+[data-rolex="datejust"] .detalhes-heading{text-align:left;margin:0;max-width:48%}
+[data-rolex="datejust"] .detalhes-layout{display:block;min-height:250px;width:46%}
+[data-rolex="datejust"] .detalhe-visual{display:none}
+@media(max-width:760px){[data-rolex]{padding-top:440px;min-height:1050px}.section-watch,[data-rolex="daytona"] .section-watch{left:0;right:0;top:0;width:100%;height:460px}.section-watch-tools,[data-rolex="daytona"] .section-watch-tools{left:24px;right:auto;bottom:20px}[data-rolex="datejust"] .detalhes-heading,[data-rolex="datejust"] .detalhes-layout{max-width:100%;width:100%}.section-watch .watch-loading{left:50%}}

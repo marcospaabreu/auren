@@ -1,0 +1,62 @@
+{
+  "nome": "AUREN",
+  "slug": "auren",
+  "agencia": "Supera Digital",
+  "negocio": "Relojoaria fictícia de luxo",
+  "publico": "Apreciadores de alta relojoaria",
+  "identidade": {
+    "referencia": "references/chronos.aura.build.zip",
+    "preservar_direcao_visual": true,
+    "preservar_animacoes": true,
+    "cores_propostas": {
+      "fundo": "#0b0a09",
+      "texto": "#f2ede4",
+      "acento": "#c58d59"
+    },
+    "fontes_propostas": {
+      "titulo": "Instrument Serif",
+      "texto": "Manrope"
+    },
+    "tema": "escuro"
+  },
+  "logo": null,
+  "copy": {
+    "idioma": "pt-BR",
+    "depoimentos_reais": []
+  },
+  "referencias": [
+    "C:\\agencia\\site-cinematografico",
+    "C:\\agencia\\relogio\\chronos.aura.build.zip"
+  ],
+  "whatsapp": {
+    "numero": null,
+    "mensagem": null
+  },
+  "email_contato": null,
+  "secoes_propostas": [
+    "abertura",
+    "manifesto",
+    "colecao",
+    "detalhes",
+    "contato demonstrativo"
+  ],
+  "conceito": "A rolagem revela o relógio, aproxima seu mecanismo e convida a conhecer a coleção.",
+  "midia": {
+    "arquivos_proprios": "Usuário confirmou que não possui imagens ou vídeos próprios.",
+    "referencia_zip": "Captura incompleta; não contém todos os recursos da experiência 3D original.",
+    "geracao_paga_autorizada": false
+  },
+  "publicacao_autorizada": false,
+  "animacao": {
+    "modo": "WebGL procedural",
+    "biblioteca": "Three.js 0.170.0 local",
+    "modelo": "original AUREN",
+    "interacoes": [
+      "rolagem reversível",
+      "desmontagem manual",
+      "arrastar com mouse",
+      "restaurar vista"
+    ],
+    "video_necessario": false
+  }
+}

@@ -1,0 +1,10 @@
+# Local secrets and generated source media
+.env
+.env.*
+!.env.example
+*.key
+fonte/*.png
+qa/
+references/
+chronos.aura.build.zip
+__pycache__/
